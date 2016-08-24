@@ -13,7 +13,8 @@ import java.io.File;
  */
 public abstract class Media {
     
-    private File media;
+    protected String name;
+    protected File media;
 
     
     public abstract File getContent(); 
