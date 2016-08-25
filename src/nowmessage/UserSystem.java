@@ -35,4 +35,32 @@ public class UserSystem {
         }
         return UserSystem.userController;
     }
+    
+    /**
+     * Questo metodo permette all'utente di effettuare il login
+     */
+    public void login(){
+        
+    }
+    
+    /**
+     * Questo metodo permette all'utente di registrarsi
+     */
+    public void registration(){
+        
+    }
+    
+    /**
+     * Questo metodo permette di modificare il profilo utente
+     */
+    public void editProfile(){
+        
+    }
+    
+    /**
+     * Questo metodo permette di eliminare il profilo utente
+     */
+    public void deleteProfile(){
+        
+    }
 }

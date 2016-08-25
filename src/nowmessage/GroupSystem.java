@@ -5,6 +5,8 @@
  */
 package nowmessage;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Mrk
@@ -36,4 +38,53 @@ public class GroupSystem {
         }
         return GroupSystem.groupController;
     }
+    /**
+     * Questo metodo permette di aggiungere un gruppo nella lista gruppi dell'utente
+     * @param name indica il nome del gruppo
+     * @param photo indica la foto del gruppo
+     * @return la lista dei gruppi aggiornata
+     */
+    public ArrayList newGroup(String name, Image photo){
+        Group newGroup;
+        //1- richiamerà il costruttore di Group
+        //2- aggiornerà la groupList del LocalUser
+        //3- renderà la lista aggiornata dei gruppi
+        return null; //giusto per indicare qualcosa
+    }
+    
+    public void updateGroup(){
+        
+    }
+    
+    /**
+     * Questo metodo permette di rimuovere un gruppo tra quelli salvati dall'utente
+     * @param group indica il gruppo da eliminare
+     * @return la lista gruppi aggiornata
+     */
+    public ArrayList<Group> deleteGroup(Group group){
+        //1- si cerca il gruppo nella groupList del LocalUser
+        //2- lo si rimuove
+        //3- si rende la lista gruppi aggiornata
+        return null; //giusto per indicare qualcosa
+    }
+    
+    /**
+     * Questo metodo permette di inserire uno o più contatti in un gruppo
+     * @param group indica il gruppo in cui inserire i contatti
+     * @param list indica la lista dei contatti da aggiungere al gruppo
+     */
+    public void groupContact(Group group, ArrayList<Contact> list){
+        
+    }
+    
+    /**
+     * Questo metodo permette di rimuovere uno o piu' contatti da un gruppo
+     * @param group indica il gruppo da cui eliminare il o i contatti
+     * @param list indica la lista dei contatti da rimuovere dal gruppo
+     */
+    public void ungroupContact(Group group, ArrayList<Contact> list){
+        
+    }
+    
+    
 }

@@ -35,4 +35,18 @@ public class MediaSystem {
         }
         return MediaSystem.mediaController;
     }
+    
+    /**
+     * Questo metodo permette di importare un media dal disco
+     */
+    public void importMedia(){
+        
+    }
+    
+    /**
+     * Questo metodo permette di esportare un media su disco
+     */
+    public void exportMedia(){
+        
+    }
 }
