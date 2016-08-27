@@ -31,7 +31,7 @@ public class ContactSystem {
      * Questo metodo permette di creare l'istanza del controller qualora non sia già stata creata.
      * @return l'istanza del controller
      */
-    public static ContactSystem getIstance(){
+    public static ContactSystem getInstance(){
         if (ContactSystem.contactController == null){
             ContactSystem.contactController = new ContactSystem();
         }

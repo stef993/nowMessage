@@ -32,7 +32,7 @@ public class GroupSystem {
      * Questo metodo permette di creare l'istanza del controller qualora non sia già stata creata.
      * @return l'istanza del controller
      */
-    public static GroupSystem getIstance(){
+    public static GroupSystem getInstance(){
         if (GroupSystem.groupController == null){
             GroupSystem.groupController = new GroupSystem();
         }

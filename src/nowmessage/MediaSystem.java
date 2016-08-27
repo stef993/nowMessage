@@ -29,7 +29,7 @@ public class MediaSystem {
      * Questo metodo permette di creare l'istanza del controller qualora non sia già stata creata.
      * @return l'istanza del controller
      */
-    public static MediaSystem getIstance(){
+    public static MediaSystem getInstance(){
         if(MediaSystem.mediaController == null){
             MediaSystem.mediaController = new MediaSystem();
         }

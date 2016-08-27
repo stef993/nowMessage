@@ -29,7 +29,7 @@ public class MessageSystem {
      * Questo metodo permette di creare l'istanza del controller qualora non sia già stata creata.
      * @return l'istanza del controller
      */
-    public static MessageSystem getIstance(){
+    public static MessageSystem getInstance(){
         if(MessageSystem.messageController == null){
             MessageSystem.messageController = new MessageSystem();
         }
