@@ -29,7 +29,7 @@ public class UserSystem {
      * Questo metodo permette di creare l'istanza del controller qualora non sia già stata creata.
      * @return l'istanza del controller
      */
-    public static UserSystem getIstance(){
+    public static UserSystem getInstance(){
         if(UserSystem.userController == null){
             UserSystem.userController = new UserSystem();
         }
