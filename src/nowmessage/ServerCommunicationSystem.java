@@ -39,13 +39,15 @@ public class ServerCommunicationSystem {
         ArrayList<Media> mediaList = this.getMediaList();
         
         LocalUser lu = LocalUser.getInstance();
-        lu.setName(name);
-        lu.setSurname(surname);
-        lu.setEmail(email);
-        lu.setPassword(password);
-        lu.setContactList(contactList);
-        lu.setGroupList(groupList);
-        lu.setMediaList(mediaList);
+        if (lu.getName() == null){
+            lu.setName(name);
+            lu.setSurname(surname);
+            lu.setEmail(email);
+            lu.setPassword(password);
+            lu.setContactList(contactList);
+            lu.setGroupList(groupList);
+            lu.setMediaList(mediaList);
+        }
         return lu;
     }
     

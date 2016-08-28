@@ -5,6 +5,8 @@
  */
 package nowmessage;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Mrk
@@ -45,13 +47,20 @@ public class MainSystem {
         Integer input;
         boolean exit = true;
         
+        ServerCommunicationSystem server = ServerCommunicationSystem.getInstance();
+        LocalUser lu= server.getLocalUser();
+        ArrayList<Contact> contactList=lu.getContactList();
+        ArrayList<Group> groupList=lu.getGroupList();
+        
         do{
             input = mainView.showFunction();
         
             switch(input){
                 case 1: //RICHIAMA CONTROLLER CONTATTI PER STAMPARNE LA LISTA E LE OPZIONI DI GESTIONE;
+                        System.out.println(contactList);
                         break;
                 case 2: //RICHIAMA CONTROLLER GRUPPI PER STAMPARNE LA LISTA E LE OPZIONI DI GESTIONE;
+                        System.out.println(groupList);
                         break;
                 case 3: //RICHIAMA CONTROLLER MESSAGGI PER CREARNE E POI INVIARNE UNO;
                         break;
