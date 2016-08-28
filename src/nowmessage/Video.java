@@ -17,7 +17,13 @@ public class Video extends Media{
     private Double width; //risoluzione in larghezza
     private String length; //durata del video
     
-    //costructor
+    /**
+     * Constructor
+     * @param name indica il nome del video da creare
+     * @param height indica l'altezza del video da creare
+     * @param width indica la larghezza del video da creare
+     * @param length indica la durata del video
+     */
     public Video(String name, Double height, Double width, String length){
         this.name = name;
         this.height = height;
@@ -25,12 +31,35 @@ public class Video extends Media{
         this.length = length;
     }
 
-    //override Media methods
+    //methods
+    
+    /**
+     * Questo metodo permette di conoscere il contenuto del video
+     * @return il contenuto del video
+     */
+    @Override
     public File getContent() {
         return this.media;
     }
     
+    /**
+     * Questo metodo permette di settare il video
+     */
+    @Override
     public void setContent(){
         
+    }
+    
+    /**
+     * Questo metodo permette di avere una rappresentazione testuale dell'oggetto Video
+     * @return la stringa associata
+     */
+    @Override
+    public String toString(){
+        return "Tipo: Video"
+                + "\nNome: " + name
+                + "\nAltezza: " + height
+                + "\nLarghezza: " + width
+                + "\nDurata: " + length;
     }
 }

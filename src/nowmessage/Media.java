@@ -16,9 +16,15 @@ public abstract class Media {
     protected String name;
     protected File media;
 
-    
+    /**
+     * Questo metodo permette di conoscere il contenuto del media
+     * @return il contenuto del media
+     */
     public abstract File getContent(); 
 
+    /**
+     * Questo metodo permette di settare il file media
+     */
     public abstract void setContent();
 
      

@@ -16,8 +16,7 @@ import java.util.ArrayList;
  */
 public class GroupSystem {
     
-    private static GroupSystem groupController;
-    //indica una istanza della stessa classe GroupSystem
+    private static GroupSystem groupController; //indica una istanza della stessa classe GroupSystem
     
     /**
      * Constructor
@@ -38,6 +37,7 @@ public class GroupSystem {
         }
         return GroupSystem.groupController;
     }
+    
     /**
      * Questo metodo permette di aggiungere un gruppo nella lista gruppi dell'utente
      * @param name indica il nome del gruppo
@@ -52,6 +52,9 @@ public class GroupSystem {
         return null; //giusto per indicare qualcosa
     }
     
+    /**
+     * Questo metodo permette di modificare un gruppo
+     */
     public void updateGroup(){
         
     }

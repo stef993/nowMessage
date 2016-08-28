@@ -73,7 +73,7 @@ public class MessageSystem {
      * @param msg indica il messaggio da creare
      */
     public void sendMessage(Message msg){
-        //forse da implementare
+        
     }
     
     /**
