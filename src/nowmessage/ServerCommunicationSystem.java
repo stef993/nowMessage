@@ -38,7 +38,14 @@ public class ServerCommunicationSystem {
         ArrayList<Group> groupList = this.getGroupList();
         ArrayList<Media> mediaList = this.getMediaList();
         
-        LocalUser lu = new LocalUser(name,surname,email,password,contactList,groupList,mediaList);
+        LocalUser lu = LocalUser.getInstance();
+        lu.setName(name);
+        lu.setSurname(surname);
+        lu.setEmail(email);
+        lu.setPassword(password);
+        lu.setContactList(contactList);
+        lu.setGroupList(groupList);
+        lu.setMediaList(mediaList);
         return lu;
     }
     
@@ -54,17 +61,25 @@ public class ServerCommunicationSystem {
     }
     
     private ArrayList<Group> getGroupList(){
-        
+        ArrayList<Group> groupList = new ArrayList();
         ArrayList<Contact> contactList=new ArrayList();
         contactList.add(new Contact("infovillasimius@gmail.com",new Image("Foto",100.0,100.0)));
         contactList.add(new Contact("cecchetto90@gmail.com",new Image("checco",120.0,100.0)));
         contactList.add(new Contact("moreddu@gmail.com",new Image("Giova",200.0,150.0)));
-        ArrayList<Group> groupList = new ArrayList();
-        groupList.add(new Group("IUM-2015",new Image("IUM-2015",200.0,200.0),contactList));
-        contactList.add(new Contact("stef@live.it",new Image("Foto",100.0,150.0)));
-        contactList.add(new Contact("daniel14@hotmail.com",new Image("Foto",100.0,100.0)));
-        contactList.add(new Contact("alex92@hotmail.com",new Image("Alex",100.0,100.0)));
-        groupList.add(new Group("ISW-2016",new Image("ISW-2016",200.0,200.0),contactList));
+        
+        Group group = new Group("IUM-2015",new Image("IUM-2015",200.0,200.0));
+        group.setContactList(contactList);
+        groupList.add(group);
+        
+        ArrayList<Contact> contactList1=contactList;
+        contactList1.add(new Contact("stef@live.it",new Image("Foto",100.0,150.0)));
+        contactList1.add(new Contact("daniel14@hotmail.com",new Image("Foto",100.0,100.0)));
+        contactList1.add(new Contact("alex92@hotmail.com",new Image("Alex",100.0,100.0)));
+
+        Group group1 = new Group("ISW-2016",new Image("ISW-2016",200.0,200.0));
+        group1.setContactList(contactList1);
+        groupList.add(group1);
+        
         return groupList;
     }
     
