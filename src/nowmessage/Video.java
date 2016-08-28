@@ -49,4 +49,17 @@ public class Video extends Media{
     public void setContent(){
         
     }
+    
+    /**
+     * Questo metodo permette di avere una rappresentazione testuale dell'oggetto Video
+     * @return la stringa associata
+     */
+    @Override
+    public String toString(){
+        return "Tipo: Video"
+                + "\nNome: " + name
+                + "\nAltezza: " + height
+                + "\nLarghezza: " + width
+                + "\nDurata: " + length;
+    }
 }

@@ -125,6 +125,17 @@ public class Message {
         this.stateMsg = stateMsg;
     }
     
-    
+    /**
+     * Questo metodo permette di avere una rappresentazione testuale dell'oggetto Message
+     * @return la stringa associata
+     */
+    @Override
+    public String toString(){
+        return "Mittente: " + sender.getEmail()
+                + "\nDestinatario: " + receiver.getEmail()
+                + "\nTesto: " + text
+                + "\nAllegato: " + attachment
+                + "\nStato: " + stateMsg;
+    }
     
 }

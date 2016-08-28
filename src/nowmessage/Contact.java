@@ -90,7 +90,16 @@ public class Contact {
         this.messages = messages;
     }
     
-    
+    /**
+     * Questo metodo permette di avere una rappresentazione testuale dell'oggetto Contact
+     * @return la stringa associata
+     */
+    @Override
+    public String toString(){
+        return "Email: " + email
+                + "\nFoto: " + photo
+                + "\nStato: " + contactBlocked;
+    }
     
     
     

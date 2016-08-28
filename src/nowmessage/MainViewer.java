@@ -28,11 +28,12 @@ public class MainViewer {
     public Integer showFunction(){
         System.out.println("\n\n**NowMessage**");
 
-        System.out.println("\nInserisci:\n"
+        System.out.print("\nInserisci:\n"
                 + "1) Per visualizzare la tua rubrica\n"
                 + "2) Per visualizzare i gruppi salvati\n"
                 + "3) Per creare un nuovo messaggio\n"
-                + "0) Per uscire");
+                + "0) Per uscire\n"
+                + "Input: ");
         
         return input.nextInt();
     

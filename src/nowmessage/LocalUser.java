@@ -129,6 +129,22 @@ public class LocalUser {
     }
 
     /**
+     * Questo metodo permette di conoscere la foto del profilo dell'utente corrente
+     * @return la foto del profilo dell'utente
+     */
+    public Image getPhoto(){
+        return this.photo;
+    }
+    
+    /**
+     * Questo metodo permette di settare la foto del profilo dell'utente
+     * @param photo indica la nuova foto del profilo utente
+     */
+    public void setPhoto(Image photo){
+        this.photo = photo;
+    }
+    
+    /**
      * Questo metodo permette di conoscere la rubrica dell'utente
      * @return la rubrica utente
      */
@@ -176,6 +192,17 @@ public class LocalUser {
         this.mediaList = mediaList;
     }
     
-       
+    /**
+     * Questo metodo permette di avere una rappresentazione testuale dell'oggetto LocalUser
+     * @return la stringa associata
+     */
+    @Override
+    public String toString(){
+        return "Nome: " + name
+                + "\nCognome: " + surname
+                + "\nEmail: " + email
+                + "\nPassword: " + password
+                + "\nFoto: " + photo;
+    }
     
 }

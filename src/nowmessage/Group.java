@@ -87,6 +87,14 @@ public class Group {
         this.contactList = contactList;
     }
     
-    
+    /**
+     * Questo metodo permette di avere una rappresentazione testuale dell'oggetto Group
+     * @return la stringa associata
+     */
+    @Override
+    public String toString(){
+        return "Nome: " + name
+                + "\nFoto: " + photo;
+    }
     
 }
