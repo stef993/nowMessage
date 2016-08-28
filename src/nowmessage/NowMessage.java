@@ -15,9 +15,7 @@ public class NowMessage {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ServerCommunicationSystem server=ServerCommunicationSystem.getInstance();
-        LocalUser lu=server.getLocalUser();
-        System.out.println(lu.getGroupList().toString());
+        // TODO code application logic here
     }
     
 }
