@@ -17,10 +17,7 @@ public class NowMessage {
     public static void main(String[] args) {
         
         MainSystem main = MainSystem.getInstance(); //crea l'unica istanza del MainSystem nel programma
-        
-        //LocalUser user = LocalUser.getIstance(); //crea l'unica istanza del database
-        
-        
+                
         //inizio esecuzione
         main.startSystem();
     }

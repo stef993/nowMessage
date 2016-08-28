@@ -18,6 +18,8 @@ public class ContactSystem {
     
     private static ContactSystem contactController;
     
+    private final LocalUser user = LocalUser.getInstance();
+    
     /**
      * Constructor
      */
@@ -50,6 +52,14 @@ public class ContactSystem {
         //2- aggiornerà la contactList del LocalUser
         //3- renderà la lista aggiornata dei contatti
         return null; //giusto per indicare qualcosa
+    }
+    
+    /**
+     * Questo metodo permette di rispondere ad una richiesta di aggiunta del proprio contatto nella
+     * rubrica di un altro utente
+     */
+    public void acceptToBeAdded(){
+        
     }
     
     /**
@@ -100,8 +110,7 @@ public class ContactSystem {
      * @return la lista contatti
      */
     public ArrayList<Contact> getContactList(){
-        //rende la lista contatti presente nel local user
-        return null;
+        return user.getContactList(); //rende la lista contatti presente nel local user
     }
     
     
