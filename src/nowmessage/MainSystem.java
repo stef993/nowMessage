@@ -42,17 +42,24 @@ public class MainSystem {
      */
     public void startSystem(){
         
-        Integer input = mainView.showFunction();
+        Integer input;
+        boolean exit = true;
         
-        switch(input){
-            case 1: //RICHIAMA CONTROLLER CONTATTI PER STAMPARNE LA LISTA E LE OPZIONI DI GESTIONE;
-                    break;
-            case 2: //RICHIAMA CONTROLLER GRUPPI PER STAMPARNE LA LISTA E LE OPZIONI DI GESTIONE;
-                    break;
-            case 3: //RICHIAMA CONTROLLER MESSAGGI PER CREARNE E POI INVIARNE UNO;
-                    break;
-            case 0: System.out.println("Esci");
-                    break;
-        }
+        do{
+            input = mainView.showFunction();
+        
+            switch(input){
+                case 1: //RICHIAMA CONTROLLER CONTATTI PER STAMPARNE LA LISTA E LE OPZIONI DI GESTIONE;
+                        break;
+                case 2: //RICHIAMA CONTROLLER GRUPPI PER STAMPARNE LA LISTA E LE OPZIONI DI GESTIONE;
+                        break;
+                case 3: //RICHIAMA CONTROLLER MESSAGGI PER CREARNE E POI INVIARNE UNO;
+                        break;
+                case 0: System.out.println("Esci");
+                        exit = false;
+                        break;
+            }
+        }while(exit);
+        
     }
 }

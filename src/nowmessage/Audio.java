@@ -43,4 +43,15 @@ public class Audio extends Media {
     public void setContent(){
         
     }
+    
+    /**
+     * Questo metodo permette di avere una rappresentazione testuale dell'oggetto Image
+     * @return la stringa associata
+     */
+    @Override
+    public String toString(){
+        return "Tipo: Audio"
+                + "\nNome: " + name
+                + "\nDurata: " + length;
+    }
 }

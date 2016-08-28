@@ -39,4 +39,14 @@ public class Other extends Media{
     public void setContent(){
         this.media = media;
     }
+    
+    /**
+     * Questo metodo permette di avere una rappresentazione testuale dell'oggetto Other
+     * @return la stringa associata
+     */
+    @Override
+    public String toString(){
+        return "Tipo: Altro"
+                + "\nNome: " + name;
+    }
 }

@@ -47,4 +47,16 @@ public class Image extends Media{
 
     }
     
+    /**
+     * Questo metodo permette di avere una rappresentazione testuale dell'oggetto Image
+     * @return la stringa associata
+     */
+    @Override
+    public String toString(){
+        return "Tipo: Immagine"
+                + "\nNome: " + name
+                + "\nAltezza: " + height
+                + "\nLarghezza: " + width;
+    }
+    
 }
