@@ -95,6 +95,15 @@ public class ContactSystem {
         //4- si aggiorna il contatto all'interno della lista con il metodo "set(int index, E element)"
     }
     
+    /**
+     * Questo metodo permette di prelevare la lista dei contatti dal LocalUser
+     * @return la lista contatti
+     */
+    public ArrayList<Contact> getContactList(){
+        //rende la lista contatti presente nel local user
+        return null;
+    }
+    
     
     
 }

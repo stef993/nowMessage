@@ -13,27 +13,33 @@ import java.util.ArrayList;
  */
 public class LocalUser {
     
+    private static LocalUser database;
+    
     private String name;
     private String surname;
     private String email;
     private String password;
+    private Image photo;
     private ArrayList<Contact> contactList;
     private ArrayList<Group> groupList;
     private ArrayList<Media> mediaList;
 
     //constructor
-    public LocalUser(String name, String surname, String email, String password) {
+    public LocalUser(String name, String surname, String email, String password, Image photo) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
+        this.photo = photo;
     }
 
-    public LocalUser(String name, String surname, String email, String password, ArrayList<Contact> contactList, ArrayList<Group> groupList, ArrayList<Media> mediaList) {
+    public LocalUser(String name, String surname, String email, String password, Image photo, 
+            ArrayList<Contact> contactList, ArrayList<Group> groupList, ArrayList<Media> mediaList) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
+        this.photo = photo;
         this.contactList = contactList;
         this.groupList = groupList;
         this.mediaList = mediaList;
