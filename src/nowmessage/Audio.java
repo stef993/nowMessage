@@ -15,17 +15,31 @@ public class Audio extends Media {
     
     private String length; //durata dell'audio
     
-    //costructor
+    /**
+     * Costructor
+     * @param name indica il nome della traccia audio da creare
+     * @param length indica la durata della traccia audio
+     */
     public Audio(String name, String length){
         this.name = name;
         this.length = length;
     }
 
-    //override Media methods
+    //methods
+    
+    /**
+     * Questo metodo permette di conoscere il contenuto dell'audio
+     * @return il contenuto dell'audio
+     */
+    @Override
     public File getContent() {
         return this.media;
     }
     
+    /**
+     * Questo metodo permette di settare la traccia audio
+     */
+    @Override
     public void setContent(){
         
     }

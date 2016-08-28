@@ -16,18 +16,33 @@ public class Image extends Media{
     private Double height; //risoluzione in altezza
     private Double width; //risoluzione in larghezza
     
-    //costructor
+    /**
+     * Constructor
+     * @param name indica il nome dell'immagine da creare
+     * @param height indica l'altezza dell'immagine
+     * @param width  indica la larghezza dell'immagine
+     */
     public Image(String name, Double height, Double width){    
         this.name = name;
         this.height = height;
         this.width = width;
     }
 
-    //override Media methods
+    //methods
+    
+    /**
+     * Questo metodo permette di conoscere il contenuto dell'immagine
+     * @return il contenuto dell'immagine
+     */
+    @Override
     public File getContent() {
         return this.media;
     }
     
+    /**
+     * Questo metodo permette di settare l'immagine
+     */
+    @Override
     public void setContent(){
 
     }

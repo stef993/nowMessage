@@ -13,16 +13,29 @@ import java.io.File;
  */
 public class Other extends Media{
     
-    //costructor
+    /**
+     * Constructor
+     * @param name indica il nome del file 
+     */
     public Other(String name){
         this.name = name;
     }
-
-    //override Media methods
+ 
+    //methods
+    
+    /**
+     * Questo metodo permette di conoscere il contenuto del file
+     * @return il contenuto del file
+     */
+    @Override
     public File getContent() {
         return this.media;
     }
     
+    /**
+     * Questo metodo permette di settare il file
+     */
+    @Override
     public void setContent(){
         this.media = media;
     }
