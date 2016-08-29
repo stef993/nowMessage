@@ -26,7 +26,7 @@ public class MainViewer {
      * @return la selezione dell'utente
      */
     public Integer showFunction(){
-        System.out.println("\n\n**NowMessage**");
+        System.out.println("\n**NowMessage**");
 
         System.out.print("\nInserisci:\n"
                 + "1) Per visualizzare la tua rubrica\n"

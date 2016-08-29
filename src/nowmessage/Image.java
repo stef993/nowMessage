@@ -53,7 +53,7 @@ public class Image extends Media{
      */
     @Override
     public String toString(){
-        return "Tipo: Immagine"
+        return "\nTipo: Immagine"
                 + "\nNome: " + name
                 + "\nAltezza: " + height
                 + "\nLarghezza: " + width;

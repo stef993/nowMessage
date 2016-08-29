@@ -46,7 +46,7 @@ public class Other extends Media{
      */
     @Override
     public String toString(){
-        return "Tipo: Altro"
+        return "\nTipo: Altro"
                 + "\nNome: " + name;
     }
 }
