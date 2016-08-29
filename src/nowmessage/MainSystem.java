@@ -47,24 +47,29 @@ public class MainSystem {
         Integer input;
         boolean exit = true;
         
+        //CARICAMENTO PROFILO UTENTE
         ServerCommunicationSystem server = ServerCommunicationSystem.getInstance();
-        LocalUser lu= server.getLocalUser();
-        ArrayList<Contact> contactList=lu.getContactList();
-        ArrayList<Group> groupList=lu.getGroupList();
+        LocalUser lu = server.getLocalUser();
+        //FINE CARICAMENTO
+        
+        /*ArrayList<Contact> contactList =lu.getContactList();
+        ArrayList<Group> groupList = lu.getGroupList();*/
         
         do{
             input = mainView.showFunction();
         
             switch(input){
                 case 1: //RICHIAMA CONTROLLER CONTATTI PER STAMPARNE LA LISTA E LE OPZIONI DI GESTIONE;
-                        System.out.println(contactList);
+                        //System.out.println(contactList);
+                        contactController.showContactList();
                         break;
                 case 2: //RICHIAMA CONTROLLER GRUPPI PER STAMPARNE LA LISTA E LE OPZIONI DI GESTIONE;
-                        System.out.println(groupList);
+                        //System.out.println(groupList);
+                        groupController.showGroupList();
                         break;
                 case 3: //RICHIAMA CONTROLLER MESSAGGI PER CREARNE E POI INVIARNE UNO;
                         break;
-                case 0: System.out.println("Esci");
+                case 0: System.out.println("\n**Esci**");
                         exit = false;
                         break;
             }

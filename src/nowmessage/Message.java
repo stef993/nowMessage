@@ -131,7 +131,7 @@ public class Message {
      */
     @Override
     public String toString(){
-        return "Mittente: " + sender.getEmail()
+        return "\nMittente: " + sender.getEmail()
                 + "\nDestinatario: " + receiver.getEmail()
                 + "\nTesto: " + text
                 + "\nAllegato: " + attachment

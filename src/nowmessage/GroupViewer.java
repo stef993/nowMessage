@@ -5,10 +5,32 @@
  */
 package nowmessage;
 
+import java.util.ArrayList;
+import java.util.ListIterator;
+
 /**
  *
  * @author Mrk
  */
 public class GroupViewer {
+    
+    /**
+     * Questo metodo permette di mostrare all'utente un gruppo
+     * @param group indica il gruppo da mostrare
+     */
+    public void showGroup(Group group){
+        System.out.println(group);
+    }
+    
+    /**
+     * Questo metodo permette di mostrare all'utente la propria lista gruppi
+     * @param list indica la lista gruppi da mostrare
+     */
+    public void showGroupList(ArrayList<Group> list){
+        System.out.println("\n**Gruppi**");
+        for(Group group : list) {
+            showGroup(group);
+        }
+    }
     
 }

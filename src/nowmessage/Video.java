@@ -56,7 +56,7 @@ public class Video extends Media{
      */
     @Override
     public String toString(){
-        return "Tipo: Video"
+        return "\nTipo: Video"
                 + "\nNome: " + name
                 + "\nAltezza: " + height
                 + "\nLarghezza: " + width
