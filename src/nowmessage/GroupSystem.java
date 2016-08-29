@@ -18,6 +18,10 @@ public class GroupSystem {
     
     private static GroupSystem groupController; //indica una istanza della stessa classe GroupSystem
     
+    private final LocalUser user = LocalUser.getInstance();
+    
+    private final GroupViewer groupView = new GroupViewer();
+    
     /**
      * Constructor
      */
@@ -87,6 +91,21 @@ public class GroupSystem {
      */
     public void ungroupContact(Group group, ArrayList<Contact> list){
         
+    }
+    
+    /**
+     * Questo metodo permette di prelevare la lista dei gruppi dal LocalUser
+     * @return la lista gruppi del LocalUser
+     */
+    public ArrayList<Group> getGroupList(){
+        return user.getGroupList();
+    }
+    
+    /**
+     * Questo metodo richiama la vista dei gruppi per permetterne di visualizzarne la lista
+     */
+    public void showGroupList(){
+        groupView.showGroupList(getGroupList());
     }
     
     

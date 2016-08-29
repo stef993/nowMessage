@@ -96,8 +96,8 @@ public class Contact {
      */
     @Override
     public String toString(){
-        return "Email: " + email
-                + "\nFoto: " + photo
+        return "\nEmail: " + email
+                + "\nFoto: " + photo.getName()
                 + "\nStato: " + contactBlocked;
     }
     

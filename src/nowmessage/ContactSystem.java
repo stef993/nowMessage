@@ -20,6 +20,8 @@ public class ContactSystem {
     
     private final LocalUser user = LocalUser.getInstance();
     
+    private final ContactViewer contactView = new ContactViewer();
+    
     /**
      * Constructor
      */
@@ -107,10 +109,17 @@ public class ContactSystem {
     
     /**
      * Questo metodo permette di prelevare la lista dei contatti dal LocalUser
-     * @return la lista contatti
+     * @return la lista contatti del LocalUser
      */
     public ArrayList<Contact> getContactList(){
-        return user.getContactList(); //rende la lista contatti presente nel local user
+        return user.getContactList();
+    }
+    
+    /**
+     * Questo metodo richiama la vista dei contatti per permettere la visualizzazione della rubrica
+     */
+    public void showContactList(){
+        contactView.showContactList(getContactList());
     }
     
     

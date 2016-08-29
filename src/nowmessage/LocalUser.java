@@ -198,11 +198,11 @@ public class LocalUser {
      */
     @Override
     public String toString(){
-        return "Nome: " + name
+        return "\nNome: " + name
                 + "\nCognome: " + surname
                 + "\nEmail: " + email
                 + "\nPassword: " + password
-                + "\nFoto: " + photo;
+                + "\nFoto: " + photo.getName();
     }
     
 }
