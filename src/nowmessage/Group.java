@@ -93,8 +93,8 @@ public class Group {
      */
     @Override
     public String toString(){
-        return "\nNome: " + name
-                + "\nFoto: " + photo.getName();
+        return "\tNome: " + name
+                + "\tFoto: " + photo.getName();
     }
     
 }
