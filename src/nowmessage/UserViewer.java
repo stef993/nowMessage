@@ -11,4 +11,13 @@ package nowmessage;
  */
 public class UserViewer {
     
+    /**
+     * Questo metodo permette di mostrare le informazioni relative al profilo utente
+     * @param user 
+     */
+    public void showUser(LocalUser user){
+        System.out.println("\n**Profilo Utente**");
+        System.out.println(user);
+    }
+    
 }

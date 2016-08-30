@@ -50,7 +50,7 @@ public class Audio extends Media {
      */
     @Override
     public String toString(){
-        return "Tipo: Audio"
+        return "\nTipo: Audio"
                 + "\nNome: " + name
                 + "\nDurata: " + length;
     }

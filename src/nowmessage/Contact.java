@@ -96,9 +96,16 @@ public class Contact {
      */
     @Override
     public String toString(){
-        return "Email: " + email
-                + "\nFoto: " + photo
-                + "\nStato: " + contactBlocked;
+        int num = 30 - email.length();
+        String s="";
+        if (num>0){
+            for (int n=0 ; n<num;n++ ){
+            s=s+" ";}
+        }
+        return "\tEmail: " + email
+                + s
+                + "\tFoto: " + photo.getName()
+                + "\tStato: " + contactBlocked;
     }
     
     

@@ -11,71 +11,33 @@ package nowmessage;
  */
 public class Message {
     
-    private Contact sender;
-    private Contact receiver;
     private String text;
     private Media attachment;
     private Integer stateMsg;
 
     /**
      * Constructor
-     * @param sender indica il mittente del messaggio da creare
-     * @param receiver indica il destinatario del messaggio da creare
      * @param text indica il testo del messaggio da creare
      */
-    public Message(Contact sender, Contact receiver, String text) {
-        this.sender = sender;
-        this.receiver = receiver;
+    public Message(String text) {
+        
         this.text = text;
+        this.stateMsg=0;
     }
     
     /**
      * Constructor
-     * @param sender indica il mittente del messaggio da creare
-     * @param receiver indica il destinatario del messaggio da creare
      * @param text indica il testo del messaggio da creare
      * @param attachment indica l'allegato multimediale del messaggio da creare
      */
-    public Message(Contact sender, Contact receiver, String text, Media attachment) {
-        this.sender = sender;
-        this.receiver = receiver;
+    public Message(String text, Media attachment) {
+        
         this.text = text;
         this.attachment = attachment;
     }
 
     //methods
     
-    /**
-     * Questo metodo permette di conoscere il mittente del messaggio
-     * @return il mittente
-     */
-    public Contact getSender() {
-        return sender;
-    }
-
-    /**
-     * Questo metodo permette di settare il mittente del messaggio
-     * @param sender indica il mittente
-     */
-    public void setSender(Contact sender) {
-        this.sender = sender;
-    }
-
-    /**
-     * Questo metodo permette di conoscere il destinatario del messaggio
-     * @return il destinatario
-     */
-    public Contact getReceiver() {
-        return receiver;
-    }
-
-    /**
-     * Questo metodo permette di settare il destinatario del messaggio
-     * @param receiver indica il destinatario
-     */
-    public void setReceiver(Contact receiver) {
-        this.receiver = receiver;
-    }
 
     /**
      * Questo metodo permette di conoscere il testo del messaggio
@@ -131,9 +93,7 @@ public class Message {
      */
     @Override
     public String toString(){
-        return "Mittente: " + sender.getEmail()
-                + "\nDestinatario: " + receiver.getEmail()
-                + "\nTesto: " + text
+        return  "\nTesto: " + text
                 + "\nAllegato: " + attachment
                 + "\nStato: " + stateMsg;
     }

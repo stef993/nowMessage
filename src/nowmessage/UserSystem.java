@@ -16,6 +16,10 @@ public class UserSystem {
     
     private static UserSystem userController;
     
+    private final LocalUser user = LocalUser.getInstance();
+    
+    private final UserViewer userView = new UserViewer();
+    
     /**
      * Constructor
      */
@@ -62,5 +66,12 @@ public class UserSystem {
      */
     public void deleteProfile(){
         
+    }
+    
+    /**
+     * Questo metodo richiama la vista dello user per poterne visualizzare le informazioni del profilo
+     */
+    public void showUser(){
+        userView.showUser(user);
     }
 }

@@ -5,6 +5,8 @@
  */
 package nowmessage;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Mrk
@@ -15,6 +17,10 @@ package nowmessage;
 public class MediaSystem {
     
     private static MediaSystem mediaController;
+    
+    private final LocalUser user = LocalUser.getInstance();
+    
+    private final MediaViewer mediaView = new MediaViewer();
     
     /**
      * Constructor
@@ -48,5 +54,20 @@ public class MediaSystem {
      */
     public void exportMedia(){
         
+    }
+    
+    /**
+     * Questo metodo permette di prelevare la lista dei media dal LocalUser
+     * @return la lista media del LocalUser
+     */
+    public ArrayList<Media> getMediaList(){
+        return user.getMediaList();
+    }
+    
+    /**
+     * Questo metodo richiama la vista dei media per permetterne di visualizzarne la lista
+     */
+    public void showMediaList(){
+        mediaView.showMediaList(getMediaList());
     }
 }
