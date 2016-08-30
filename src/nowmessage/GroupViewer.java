@@ -27,8 +27,11 @@ public class GroupViewer {
      * @param list indica la lista gruppi da mostrare
      */
     public void showGroupList(ArrayList<Group> list){
+        int num=1;
         System.out.println("\n**Gruppi**");
         for(Group group : list) {
+            System.out.print("n. "+num+" ");
+            num+=1;
             showGroup(group);
         }
     }
